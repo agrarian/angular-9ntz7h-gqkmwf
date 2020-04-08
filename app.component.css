@@ -1,0 +1,61 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+.box-form {
+    webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+table.box-table td {
+    padding-top: 10px;
+}
+.highcontrast .box-form {
+    webkit-box-shadow: 0 2px 2px 0 rgb(255, 217, 57), 0 3px 1px -2px rgb(255, 217, 57), 0 1px 5px 0 rgb(255, 217, 57);
+    box-shadow: 0 2px 2px 0 rgb(255, 217, 57), 0 3px 1px -2px rgb(255, 217, 57), 0 1px 5px 0 rgb(255, 217, 57);
+}
+table.box-table td.formtext {
+    color:#8a2be2;
+}
+.highcontrast table.box-table td.formtext {
+    color:#f8fc08;
+}
+.e-float-input:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input:not(.e-input-focus) textarea:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input.e-control-wrapper:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top) {
+color: red !important;
+}
+/* Customizing DropDownList labels */
+.e-float-input:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input:not(.e-input-focus) textarea:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input.e-control-wrapper:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top) { 
+  color:black; /* !important; */
+  font-size: 14px;
+} 
+.e-float-input:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input:not(.e-input-focus) textarea:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top), 
+.e-float-input.e-control-wrapper:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:valid) ~ label.e-float-text:not(.e-label-top)::before { 
+  content: 'Select ';
+} 
+/* .e-float-input.e-control-wrapper:not(.e-input-focus):not(.e-disabled) input:not(:focus):not(:required) ~ label.e-float-text:not(.e-label-top)::after { */
+.e-float-input.e-control-wrapper:not(.e-input-focus):not(.e-disabled) select:not(:required) ~ label.e-float-text:not(.e-label-top)::after {
+  content:"  ALL";
+} 
+/* Customizing MultiSelect labels */
+/* .e-float-input:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text:not(.e-label-top), .e-float-input.e-control-wrapper:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text:not(.e-label-top), .e-float-input.e-bigger:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text:not(.e-label-top) {
+    color: black;
+    font-size:14px;
+  }
+   .e-float-input:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::before, .e-float-input.e-control-wrapper:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::before, .e-float-input.e-bigger:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::before {
+    content:"Select ";
+   }
+   .e-float-input:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::after, .e-float-input.e-control-wrapper:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::after, .e-float-input.e-bigger:not(.e-error):not(.e-input-focus) input:not(:focus):valid ~ label.e-float-text.e-label-bottom::after {
+    content:"  ALL";
+   }
+  */
+/* Adding required red dot to Required fields */
+/* First line catches the DatePickers, and the second the DropDownLists */
+.e-float-input.e-control-wrapper input:required ~ label.e-float-text::after,
+.e-float-input.e-control-wrapper select:required ~ label.e-float-text::after
+{
+  content: ' * ';
+  color:red;
+} 

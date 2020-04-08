@@ -1,0 +1,26 @@
+<div class="control-section">
+	<div class="col-lg-8  content-wrapper">
+		<div id='content' class='box-form' style="margin: 0 auto; width:250px; padding:25px">
+			<form [formGroup]="skillForm" novalidate id="formId">
+				<div class='input-group'>
+					<ejs-dropdownlist formControlName="user" name="user" [dataSource]='userLookupData' [value]='user' [fields]='userFields'
+						floatLabelType='Auto' validationRules placeholder='User:' class="qc-text-input"
+						showClearButton=true formControlName="user" name="user" [required]="userRequired">
+					</ejs-dropdownlist>
+					<div *ngIf="skillForm.controls.user.invalid && (skillForm.controls.user.dirty || skillForm.controls.user.touched)" class="alert alert-danger">
+						<div *ngIf="skillForm.controls.user.errors.required" class="form-error">User is required.</div>
+					</div>
+					<br>
+</div>
+					<div class='input-group'>
+						<label for="reportType" class="float-left">Report Type:</label>
+						<div class="float-left" style="text-align: left;">
+							<ejs-radiobutton [value]=1 formControlName="repType" cssClass="e-small" label="Detailed" name="repType"
+								(change)='onRepTypeChange($event);' ></ejs-radiobutton><br />
+							<ejs-radiobutton [value]=2 formControlName="repType" cssClass="e-small" label="Rolled-up" name="repType"
+								(change)='onRepTypeChange($event);' ></ejs-radiobutton>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
